@@ -1,80 +1,79 @@
 .task-input-container {
-    position: relative;
-    width: 414px;
-    margin-top: 50px;
-    margin-bottom: 20px; 
-  }
-  
-  .task-input,
-  .task-textarea {
-    width: 95%;
-    height: 65px;
-    padding: 15px;
-    box-sizing: border-box;
-    background: #FFFFFF;
-    border: 1px solid #C9C9C9;
-    border-radius: 3px;
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    color: #555555;
-    resize: none; 
-  }
-  .close-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 1010; 
-  }
-  .task-input::placeholder,
-  .task-textarea::placeholder {
-    color: #B3B3B3;
-  }
-  
-  .task-title-label,
-  .task-description-label {
-    position: absolute;
-    top: -25px; 
-    left: 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    color: #555555;
-  }
-  
-  .modal-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .btn {
-    width: 160px;
-    height: 40px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .btn-cancel {
-    background-color: #FFFFFF;
-    border: 0px solid #ccc;
-    color: white;
-  }
-  
-  .btn-primary {
-    background-color: #639605;
-    color: #fff;
-    border: none;
-  }
-  .error-message {
-    color: red;
-    margin-top: 10px;
-  }
-  
+  position: relative;
+  width: 414px;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.task-input,
+.task-textarea {
+  width: 95%;
+  height: 65px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #c9c9c9;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #555555;
+  resize: none;
+}
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1010;
+}
+.task-input::placeholder,
+.task-textarea::placeholder {
+  color: #b3b3b3;
+}
+
+.task-title-label,
+.task-description-label {
+  position: absolute;
+  top: -25px;
+  left: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #555555;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn {
+  width: 160px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-cancel {
+  background-color: #ffffff;
+  border: 0px solid #ccc;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #639605;
+  color: #fff;
+  border: none;
+}
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

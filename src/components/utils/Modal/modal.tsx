@@ -1,5 +1,5 @@
-import React from 'react';
-import './modal.css';
+import React from "react";
+import "./modal.css";
 
 interface ConfirmModalProps {
   isOpen: boolean;
@@ -8,7 +8,12 @@ interface ConfirmModalProps {
   onCancel: () => void;
 }
 
-const Modal: React.FC<ConfirmModalProps> = ({ isOpen, message, onConfirm, onCancel }) => {
+const Modal: React.FC<ConfirmModalProps> = ({
+  isOpen,
+  message,
+  onConfirm,
+  onCancel,
+}) => {
   if (!isOpen) return null;
 
   return (
@@ -16,8 +21,12 @@ const Modal: React.FC<ConfirmModalProps> = ({ isOpen, message, onConfirm, onCanc
       <div className="confirm-modal">
         <p>{message}</p>
         <div className="modal-actions">
-          <button className="btn btn-cancel" onClick={onCancel}>Cancelar</button>
-          <button className="btn btn-confirm" onClick={onConfirm}>Confirmar</button>
+          <button className="btn btn-cancel" onClick={onCancel}>
+            Cancelar
+          </button>
+          <button className="btn btn-confirm" onClick={onConfirm}>
+            Confirmar
+          </button>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["node","jest"],
+    "types": ["node", "jest"],
     "paths": {
       "@/*": ["./src/*"]
     },
@@ -19,7 +19,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"    
+    "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src"]
 }

@@ -1,4 +1,3 @@
-
 import React from "react";
 import TaskForm from "../TaskForm";
 import "./TaskList.css";
@@ -21,7 +20,7 @@ const TaskList: React.FC = () => {
     confirmDelete,
     setIsConfirmModalOpen,
     handleOpenModal,
-    handlePageChange, 
+    handlePageChange,
   } = useTaskList();
 
   return (
@@ -67,7 +66,7 @@ const TaskList: React.FC = () => {
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
-          &#8249; 
+          &#8249;
         </button>
         {Array.from({ length: totalPages }, (_, index) => (
           <button
@@ -85,7 +84,7 @@ const TaskList: React.FC = () => {
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
-          &#8250; 
+          &#8250;
         </button>
       </div>
 
@@ -104,4 +103,3 @@ const TaskList: React.FC = () => {
 };
 
 export default TaskList;
-

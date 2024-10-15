@@ -1,4 +1,3 @@
-
 import React from "react";
 import "./Header.css";
 import MenuIcon from "../MenuIcon/MenuIcon";
@@ -14,12 +13,11 @@ const Header: React.FC = () => {
         <MenuIcon />
         <SearchIcon />
         <Logo />
-        <UserIcon/>
-        <CartIcon/>
+        <UserIcon />
+        <CartIcon />
       </div>
     </header>
   );
 };
 
 export default Header;
-

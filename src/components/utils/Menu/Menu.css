@@ -4,12 +4,14 @@
   bottom: 0;
   background: #639605;
   border-radius: 3px 3px 0 0;
-  transition: left 0.3s ease, width 0.3s ease;
+  transition:
+    left 0.3s ease,
+    width 0.3s ease;
 }
 
 .bg-menu {
   position: relative;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
   overflow: hidden;
   white-space: nowrap;
@@ -35,7 +37,9 @@
   bottom: 0;
   background: #639605;
   border-radius: 3px 3px 0 0;
-  transition: left 0.3s ease, width 0.3s ease;
+  transition:
+    left 0.3s ease,
+    width 0.3s ease;
 }
 
 .lang {
@@ -43,23 +47,23 @@
   width: 18px;
   height: 22px;
   right: 10px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .menu-item {
-font-size: 16px;
-font-weight: 600;
-color: var(--neutral-color);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutral-color);
 }
 
 .menu-item.active {
-color: var(--primary-color);
-font-weight: 700;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .active-indicator {
-width: 152px;
-height: 4px;
-background-color: var(--primary-color);
-border-radius: 3px 3px 0 0;
-margin: 0 auto;
+  width: 152px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 3px 3px 0 0;
+  margin: 0 auto;
 }

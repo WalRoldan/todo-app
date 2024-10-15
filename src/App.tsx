@@ -8,13 +8,12 @@ import MisDevoluciones from "./components/myReturns/myReturns";
 import MisComunicaciones from "./components/myCommunications/myCommunications";
 import MisMejoresAmigos from "./components/myBestFriends/myBestFriends";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
+import "react-toastify/dist/ReactToastify.css";
 
 const App: React.FC = () => {
   return (
     <Router>
-      <Header /> 
+      <Header />
       <Menu />
       <Routes>
         <Route path="/" element={<TaskList />} />
@@ -25,15 +24,15 @@ const App: React.FC = () => {
         <Route path="/mis-mejores-amigos" element={<MisMejoresAmigos />} />
       </Routes>
       <ToastContainer
-        position="top-right" 
-        autoClose={1000} 
-        hideProgressBar={false} 
-        newestOnTop={false} 
-        closeOnClick 
-        rtl={false} 
+        position="top-right"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
         pauseOnFocusLoss
         draggable
-        pauseOnHover 
+        pauseOnHover
       />
     </Router>
   );

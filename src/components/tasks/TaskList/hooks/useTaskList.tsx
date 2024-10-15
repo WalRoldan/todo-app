@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { deleteTodo, fetchTodos } from "../../../../services/todoService";
 
 const useTaskList = () => {
-    const [todos, setTodos] = useState<
+  const [todos, setTodos] = useState<
     { id: number; title: string; description?: string; completed: boolean }[]
   >([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -10,7 +10,7 @@ const useTaskList = () => {
   const [isConfirmModalOpen, setIsConfirmModalOpen] = useState(false);
   const [todoToDelete, setTodoToDelete] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const tasksPerPage = 3; 
+  const tasksPerPage = 3;
   const totalPages = Math.ceil(todos.length / tasksPerPage);
 
   const handleOpenModal = () => {
@@ -45,8 +45,8 @@ const useTaskList = () => {
   };
 
   const handleDeleteClick = (id: number) => {
-    setTodoToDelete(id); 
-    setIsConfirmModalOpen(true); 
+    setTodoToDelete(id);
+    setIsConfirmModalOpen(true);
   };
 
   const confirmDelete = async () => {
@@ -54,13 +54,13 @@ const useTaskList = () => {
       try {
         await deleteTodo(todoToDelete);
         setTodos((prevTodos) =>
-          prevTodos.filter((todo) => todo.id !== todoToDelete)
+          prevTodos.filter((todo) => todo.id !== todoToDelete),
         );
       } catch (error) {
         console.error("Error al eliminar la tarea:", error);
       } finally {
-        setIsConfirmModalOpen(false); 
-        setTodoToDelete(null); 
+        setIsConfirmModalOpen(false);
+        setTodoToDelete(null);
       }
     }
   };
@@ -74,7 +74,7 @@ const useTaskList = () => {
   }, []);
   const paginatedTodos = todos.slice(
     (currentPage - 1) * tasksPerPage,
-    currentPage * tasksPerPage
+    currentPage * tasksPerPage,
   );
 
   const handlePageChange = (newPage: number) => {
@@ -87,7 +87,7 @@ const useTaskList = () => {
     handleCloseModal,
     addTodo,
     isLoading,
-    todos: paginatedTodos, 
+    todos: paginatedTodos,
     capitalizeFirstLetter,
     handleDeleteClick,
     isConfirmModalOpen,
@@ -96,8 +96,7 @@ const useTaskList = () => {
     handleOpenModal,
     currentPage,
     handlePageChange,
-    totalPages
-
+    totalPages,
   };
 };
 export default useTaskList;

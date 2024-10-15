@@ -1,8 +1,6 @@
-
 # TODO App
 
 Una aplicación de tareas pendientes construida con React, que permite a los usuarios agregar, eliminar y gestionar sus tareas de manera sencilla.
-
 
 ## Características
 
@@ -37,6 +35,7 @@ Una aplicación de tareas pendientes construida con React, que permite a los usu
 ## Ejecución
 
 Para ejecutar la aplicación, utiliza el siguiente comando:
+
 ```bash
 npm start
 ```

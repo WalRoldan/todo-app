@@ -5,7 +5,12 @@ import CloseIcon from "../utils/CloseIcon/CloseIcon";
 
 const TaskForm: React.FC<{
   closeModal: () => void;
-  addTodo: (newTodo: { id: number; title: string; description: string; completed: boolean }) => void;
+  addTodo: (newTodo: {
+    id: number;
+    title: string;
+    description: string;
+    completed: boolean;
+  }) => void;
 }> = ({ closeModal, addTodo }) => {
   const [taskTitle, setTaskTitle] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
@@ -41,7 +46,7 @@ const TaskForm: React.FC<{
     <div className="modal-overlay">
       <div className="modal-container">
         <div className="close-icon" onClick={closeModal}>
-        <CloseIcon onClick={closeModal} />
+          <CloseIcon onClick={closeModal} />
         </div>
 
         <h2 className="modal-title">Añadir tarea</h2>
@@ -71,10 +76,18 @@ const TaskForm: React.FC<{
           </div>
 
           <div className="modal-buttons">
-            <button type="button" className="btn btn-cancel" onClick={closeModal}>
+            <button
+              type="button"
+              className="btn btn-cancel"
+              onClick={closeModal}
+            >
               Cancelar
             </button>
-            <button type="submit" className="btn btn-primary" disabled={isSaving}>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={isSaving}
+            >
               {isSaving ? "Guardando..." : "Guardar"}
             </button>
           </div>

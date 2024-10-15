@@ -134,7 +134,7 @@ body.modal-open {
 }
 
 .pagination button {
-  background-color: #cccccc; 
+  background-color: #cccccc;
   color: white;
   border: none;
   border-radius: 4px;
@@ -145,15 +145,15 @@ body.modal-open {
 }
 
 .pagination button:hover {
-  background-color: #0056b3; 
+  background-color: #0056b3;
 }
 .pagination button:disabled {
-  background-color: #cccccc; 
+  background-color: #cccccc;
   cursor: not-allowed;
 }
 
 .pagination span {
-  margin: 0 10px; 
+  margin: 0 10px;
   font-size: 16px;
   font-weight: bold;
   color: #333;
@@ -178,7 +178,7 @@ body.modal-open {
 }
 
 .arrow-left::before {
-  border-right-color: #007bff; 
+  border-right-color: #007bff;
   transform: rotate(135deg);
 }
 
@@ -189,7 +189,7 @@ body.modal-open {
 
 .arrow-left:hover::before,
 .arrow-right:hover::before {
-  border-color: #0056b3; 
+  border-color: #0056b3;
 }
 
 .pagination-button.actual {
