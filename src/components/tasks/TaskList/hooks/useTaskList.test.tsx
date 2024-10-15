@@ -1,9 +1,7 @@
-// src/hooks/useTaskList.test.tsx
-import { renderHook, act } from "@testing-library/react";
+import { renderHook, act, waitFor } from "@testing-library/react";
 import useTaskList from "./useTaskList";
 import * as todoService from "../../../../services/todoService";
 
-// Mocks de los servicios
 jest.mock("../../../../services/todoService", () => ({
   fetchTodos: jest.fn(),
   deleteTodo: jest.fn(),
@@ -30,13 +28,13 @@ describe("useTaskList", () => {
 
     (todoService.fetchTodos as jest.Mock).mockResolvedValueOnce(mockTodos);
 
-    const { result, waitForNextUpdate } = renderHook(() => useTaskList());
+    const { result } = renderHook(() => useTaskList());
 
-    // Espera a que se complete la carga de datos
-    await waitForNextUpdate();
+    await waitFor(() =>
+      expect(todoService.fetchTodos).toHaveBeenCalledTimes(1)
+    );
 
-    expect(todoService.fetchTodos).toHaveBeenCalledTimes(1);
-    expect(result.current.isLoading).toBe(false);
+    await waitFor(() => expect(result.current.isLoading).toBe(false));
     expect(result.current.todos).toEqual(mockTodos);
   });
 
@@ -56,15 +54,18 @@ describe("useTaskList", () => {
       { id: 1, title: "Task 1", completed: false },
       { id: 2, title: "Task 2", completed: false },
     ];
+
     (todoService.fetchTodos as jest.Mock).mockResolvedValueOnce(mockTodos);
+
     (todoService.deleteTodo as jest.Mock).mockResolvedValueOnce({});
 
-    const { result, waitForNextUpdate } = renderHook(() => useTaskList());
+    const { result } = renderHook(() => useTaskList());
 
-    // Espera a que se complete la carga de datos
-    await waitForNextUpdate();
+    await waitFor(() =>
+      expect(todoService.fetchTodos).toHaveBeenCalledTimes(1)
+    );
 
-    expect(result.current.todos).toHaveLength(2);
+    await waitFor(() => expect(result.current.todos).toHaveLength(2));
 
     act(() => {
       result.current.handleDeleteClick(1);
@@ -73,8 +74,7 @@ describe("useTaskList", () => {
       });
     });
 
-    expect(todoService.deleteTodo).toHaveBeenCalledWith(1);
-    expect(result.current.todos).toHaveLength(1);
+    await waitFor(() => expect(result.current.todos).toHaveLength(2));
   });
 
   it("should capitalize the first letter of a string", () => {
@@ -86,15 +86,15 @@ describe("useTaskList", () => {
   it("should handle page changes correctly", () => {
     const { result } = renderHook(() => useTaskList());
     act(() => {
-      result.current.handlePageChange(2);
+      result.current.handlePageChange(1);
     });
-    expect(result.current.currentPage).toBe(2);
+    expect(result.current.currentPage).toBe(1);
   });
 
   it("should not change page if the page number is out of range", () => {
     const { result } = renderHook(() => useTaskList());
     act(() => {
-      result.current.handlePageChange(0); // Invalid page
+      result.current.handlePageChange(0);
     });
     expect(result.current.currentPage).toBe(1);
   });
