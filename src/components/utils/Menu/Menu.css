@@ -1,0 +1,65 @@
+.menu {
+  position: relative;
+  width: 414px;
+  bottom: 0;
+  background: #639605;
+  border-radius: 3px 3px 0 0;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.bg-menu {
+  position: relative;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #555555;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.link.active-link {
+  color: #639605;
+}
+
+.active {
+  position: absolute;
+  height: 4px;
+  bottom: 0;
+  background: #639605;
+  border-radius: 3px 3px 0 0;
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+.lang {
+  position: absolute;
+  width: 18px;
+  height: 22px;
+  right: 10px;
+  color: #FFFFFF;
+}
+.menu-item {
+font-size: 16px;
+font-weight: 600;
+color: var(--neutral-color);
+}
+
+.menu-item.active {
+color: var(--primary-color);
+font-weight: 700;
+}
+
+.active-indicator {
+width: 152px;
+height: 4px;
+background-color: var(--primary-color);
+border-radius: 3px 3px 0 0;
+margin: 0 auto;
+}

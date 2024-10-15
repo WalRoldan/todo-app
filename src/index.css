@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.container {
+  position: relative;
+  width: 414px;
+  height: 896px;
+  background: #F4F4F4;
+}
+.titleSection {
+  position: absolute;
+  width: 250px;
+  height: 27px;
+  left: calc(50% - 172px/2 - 106px);
+  top: 1%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  display: flex;
+  align-items: center;
+  color: #555555;
+  }
