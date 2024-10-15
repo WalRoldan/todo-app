@@ -46,7 +46,3 @@ La aplicación se abrirá en `http://localhost:3000`.
 ## Contribución
 
 Si deseas contribuir, por favor abre un `issue` o un `pull request`.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
