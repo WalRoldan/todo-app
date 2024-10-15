@@ -1,3 +1,4 @@
+// src/components/myData/MisDatos.tsx
 import React from "react";
 import "./myData.css";
 
@@ -7,25 +8,34 @@ const MisDatos: React.FC = () => {
       <h1 className="titleData">Mis datos</h1>
       <div className="datos">
         <div>
-          <label>
+          <label htmlFor="nombre">
             Nombre <span className="required">*</span>
           </label>
-
-          <input type="text" placeholder="    Nombre" className="input-field" />
-        </div>
-        <div>
-          <label>
-            Email <span className="required">*</span>
-          </label>
-          <input type="text" placeholder="    Email" className="input-field" />
-        </div>
-        <div>
-          <label>
-            Teléfono <span className="required">*</span>
-          </label>
-
           <input
             type="text"
+            id="nombre"
+            placeholder="    Nombre"
+            className="input-field"
+          />
+        </div>
+        <div>
+          <label htmlFor="email">
+            Email <span className="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="email"
+            placeholder="    Email"
+            className="input-field"
+          />
+        </div>
+        <div>
+          <label htmlFor="telefono">
+            Teléfono <span className="required">*</span>
+          </label>
+          <input
+            type="text"
+            id="telefono"
             placeholder="    Teléfono"
             className="input-field"
           />

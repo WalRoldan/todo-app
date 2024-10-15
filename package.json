@@ -25,6 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
+    "testDev": "react-scripts test --watchAll --coverage",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
